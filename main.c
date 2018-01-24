@@ -49,19 +49,19 @@
 #include "mirf.h"
 #include "spi.h"
 
-#define SERIAL_DEBUG 1
+//#define SERIAL_DEBUG 1
 #ifdef SERIAL_DEBUG
 #include "uart.h"
 #endif
 
-//#define WITH_AES 1
+#define WITH_AES 1
 #ifdef WITH_AES
 #include <AESLib.h>
 #endif
 
 #define RWWSRE CTPB
 
-#define TYPE_SENSOR 5 // SIRENE
+#define TYPE_SENSOR 5 // SIREN
 
 #define CE  PB2
 #define CSN PA7
@@ -95,9 +95,6 @@ uint16_t adc;
 uint16_t v_bat[4];
 uint8_t node;
 uint8_t cmd, timeout;
-
-//data_payload data_out;
-//data_payload_init data_in;
 
 typedef struct {
 	uint8_t key[16];
